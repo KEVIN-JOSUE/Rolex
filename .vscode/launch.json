@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-RolexReclamosAppApplication<rolex-reclamos-app>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.rolexapp.rolexreclamosapp.RolexReclamosAppApplication",
+            "projectName": "rolex-reclamos-app",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

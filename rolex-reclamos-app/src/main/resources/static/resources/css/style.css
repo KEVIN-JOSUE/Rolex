@@ -1,144 +1,150 @@
 @charset "UTF-8";
 
+  
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 *{
-    margin: 0;
     padding: 0;
-    box-sizing: border-box;  
-  }
-  
-  body{
-      font-family: 'open sans';
-  }
-  
-  
-  .contenedor{
-      padding: 60px 0;
-      width: 90%;
-      max-width: 1000px;
-      margin: auto;
-      overflow: hidden;
-  }
-  
-  .titulo{
-      color: #642a73;
-      font-size: 30px;  
-      text-align: center;
-      margin-bottom: 60px;
-  }
-  
-  /* HEADER */
-  
-  header{
-     width: 100%;
-    /* height: 600px;*/
-    /*background: #df3450;  
-     /* fallback for old browsers */
- /* background: -webkit-linear-gradient(to right, #240b36, #c31432);  
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, hsla(0, 85%, 51%, 0.685), hsla(0, 78%, 26%, 0.726)), url(../img/submariner-water-beauty-shot-banner-m124060-0001_2008jva_001_portrait.webp); 
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
- /* background-size: contain;
-  background-attachment: fixed;
-  position: relative;*/
-  }
-  nav input{
-    border: none;
-    height: 40px;
-    width: 40%;
-    margin: auto;
-    background-color: white;
-    padding: auto;
-    margin-right: 10px; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
 
-  }
-  .logo{
-      /*height: 30px;*/
-      margin: auto;
-      display:flex;
-      justify-content: left;
-      align-items:flex-end;
-  }
-  
-  nav{
-        padding: 15px;
-        display: flex;
-        justify-items: end;
-        justify-content: end;
-        
-     /* padding: 30px 50px 0 0; */
-  }
-  
-  nav > a {
-      color: white;
-      font-weight: 300;
-      text-decoration: none;
-      margin-right: 10px;
-      display: flex;
-      align-items: center;
-  }
-  i {
-    font-size: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-  }
-
-  
-  .bi-carrito{
-    padding: 5px;
-    font-size: 2rem;
+body{
+    font-family: "Montserrat", sans-serif;
     font-family: 'open sans';
-  }
-  .rg h3{
-    
+}
+
+header{
+    width: 100%;
+    height: 555px;
+    background-image: url(https://thumbs.gfycat.com/RewardingFearfulEthiopianwolf-size_restricted.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+i{
+    font-size: 16px;
+}
+nav{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width: 140px;
+    margin-left: 20px;
+}
+.bar-btn{
     font-size: 20px;
     color: white;
-    font-family: 'open sans';
-  }
-  .rg a{
-    text-decoration: none;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.nav-menu{
+    position: fixed;
+    width: 100%;
+    height: 0vh;
+    top: 100px;
+    background: rgba(0, 0, 0, .95);
+    text-align: center;
+    transition: all .5s;
+}
+.nav-menu li{
+    display: none;
+    line-height: 30px ;
+    margin: 50px 0;
+    transition: all .5s;
+}
+.nav-menu li a{
     color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
 
-  }
 
-  nav > a:hover{
-      text-decoration: underline;
-  }
-  
-  header .textos-header{
-      display: flex;
-      height: 430px; 
-      width: 100%;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
-  }
-  
-  .textos-header h1{
-      font-size: 50px;    
-      color: #fff;
-  }
-  
-  .textos-header h2{
-      font-size: 30px;    
-      font-weight: 300;
-      color: #fff;
-  }
-  
-  .wave{
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-  }
-  
-  /* Galeria */
-  
+}
+
+.nav-menu li a.active, .nav-menu li a:hover{
+    color: rgb(224, 214, 66);
+    transition: 1s;
+}
+
+#check{
+    display: none;
+
+}
+
+#check:checked ~ .nav-menu{
+    height: 100vh;
+}
+#check:checked ~ .nav-menu li {
+    display: block;
+    
+}
+
+
+
+ @media screen and (min-width:768px){
+    .logo{
+        margin-left: 50px;
+
+    }
+    nav{
+        height: 100px;
+
+    }
+    .bar-btn{
+        display: none;
+    }
+    .nav-menu{
+        position: relative;
+        height: 100px;
+        top: 0;
+        background: none;
+        transition: none;
+        text-align: right;
+        margin-right: 50px;
+    }
+    .nav-menu li{
+        display: inline-block;
+        line-height: 100px;
+        margin: 0 20px;
+        transition: none;
+    }
+
+    .nav-menu li a{
+        font-size: 10px;
+    }
+} 
+ 
+.contenedor{
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.titulo{
+    color: #642a73;
+    font-size: 30px;  
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+} 
+/*galeria*/
+
   .portafolio{
       background: #f2f2f2;
   }
@@ -223,6 +229,12 @@
   .servicio-ind p{
       font-weight: 15px ;
      /* text-align: justify;*/
+  }
+  .bix{
+    font-size: 35px;
+  }
+  .serv{
+    font-size: 5%;
   }
   
   

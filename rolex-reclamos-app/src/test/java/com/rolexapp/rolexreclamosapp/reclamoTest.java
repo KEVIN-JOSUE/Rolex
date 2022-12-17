@@ -25,10 +25,9 @@ public class reclamoTest {
     @Rollback(false)
     public void testguardarReclamo(){
         Reclamos reclamos = new Reclamos("alex", "perez", "alex@gmail.com", 900025412, "av girasoles", "no llega el peddido", "nuevo");
-        //Reclamos("kevin", "yaringaño", "kvn@gmail,com", 900015412, "av flores", "no llega el peddido", "nuevo");
-       // reclamosRepository.save(reclamos);
+   
         Reclamos  reclamosGuardado =reclamosRepository.save(reclamos);
-        //Reclamos reclamos = new Reclamos("kevin","yaringaño","kvn@gmail.com","no llega el prodcuto", "nuevo");
+        
         assertNotNull(reclamosGuardado);
     }
     @Test

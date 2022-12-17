@@ -33,7 +33,7 @@ public class reclamoTest {
     }
     @Test
     public void buscarCliente(){
-        String nombre ="alex";
+        String nombre ="kevin";
         Reclamos reclamos =reclamosRepository.findBynomClie(nombre);
         assertThat(reclamos.getNomClie()).isEqualTo(nombre);
     }

@@ -7,5 +7,5 @@ import com.rolexapp.rolexreclamosapp.models.Reclamos;
 
 @Repository
 public interface IReclamos extends CrudRepository<Reclamos, Integer> {
-    
+    public Reclamos findBynomClie(String nombre);
 }

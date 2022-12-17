@@ -1,5 +1,6 @@
 package com.rolexapp.rolexreclamosapp.models;
 
+import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -27,6 +28,36 @@ public class Reclamos {
 	private String motReclamo;
     @NotEmpty(message="*Ingrese el nivel: Nuevo || Recurrente")
 	private String nivel;
+
+    public Reclamos(String nomClie, String apeClie, String email, int numCel, String direccion, String motReclamo, String nivel) {
+        this.nomClie = nomClie;
+        this.apeClie = apeClie;
+        this.email = email;
+        this.numCel = numCel;
+        this.direccion = direccion;
+        this.motReclamo = motReclamo;
+        this.nivel = nivel;
+    }
+
+    
+    public Reclamos() {
+    }
+
+    public Reclamos(int id, String nomClie, String apeClie, String email, int numCel, String direccion, String motReclamo, String nivel) {
+        this.id = id;
+        this.nomClie = nomClie;
+        this.apeClie = apeClie;
+        this.email = email;
+        this.numCel = numCel;
+        this.direccion = direccion;
+        this.motReclamo = motReclamo;
+        this.nivel = nivel;
+    }
+    
+
+   
+
+   
 
 
     public int getId() {
@@ -77,6 +108,27 @@ public class Reclamos {
 	public void setNivel(String nivel) {
 		this.nivel = nivel;
 	}
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Reclamos other = (Reclamos) obj;
+        return Objects.equals(this.nomClie, other.nomClie);
+    }
 
 	
 	
